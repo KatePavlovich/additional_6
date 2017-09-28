@@ -3,9 +3,9 @@ module.exports = function zeros(expression) {
 var arr=expression.split(/\*/g);
 console.log(arr);
 var arr2=[];
-
+var re=/\!{2}/;
 for (var i=0; i<arr.length; i++){
-if (arr[i].match('/\!/')){
+if (arr[i].match(re)){
 arr2.push(counterZeros(arr[i]));
 
 }
