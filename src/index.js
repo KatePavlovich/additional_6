@@ -4,14 +4,24 @@ var arr=expression.split(/\*/g);
 console.log(arr);
 var arr2=[];
 var re=/\!{2}/;
+
 for (var i=0; i<arr.length; i++){
+  var x=parseInt(arr[i]);
 if (arr[i].match(re)){
-arr2.push(counterZeros(arr[i]));
+  if (x<10 && x>=5) {
+    if (x%2==1){
+    arr2.push(1);
+  }
+  else arr2.push(0);
+  }
+  else {
+    arr2.push(Math.floor(counterZeros(arr[i])/2));
+
+  }
 
 }
-else arr2.push(Math.floor(counterZeros(arr[i])/2));
-
-
+else 
+arr2.push(counterZeros(arr[i]));
 
 }
 console.log(arr2);
@@ -30,6 +40,8 @@ counter += num/Math.pow(5,i)
 }
  return Math.floor(counter);
 }
+
+
 var result = arr2.reduce(function(sum, current) {
   return sum + current;
 }, 0);
