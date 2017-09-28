@@ -2,7 +2,7 @@ module.exports = function zeros(expression) {
 
 	var counter=0;
 	var N;
-var num= parseInt(expr);
+var num= parseInt(expression);
 //console.log (num);
 
 
