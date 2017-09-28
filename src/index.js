@@ -1,20 +1,15 @@
 module.exports = function zeros(expression) {
-  var ex= String(expression).split('!').map(Number);
-var res1=1;
 
-for (var i=0; i< ex.length; i++){
-	var res1 =res1 * ex[i];
-return res1;
+	var counter=0;
+	var N;
+var num= parseInt(expr);
+//console.log (num);
 
-	}
-console.log(res1);
-	var n=5;
-	while (n<res1){
-		
-		
-	 res = res + (res1/n);
-	 
-	 n= n*5;
+
+	N =Math.log(num) / Math.log(5);
+	for (var i=1; i<N; i++){
+counter += num/Math.pow(5,i)
+
 }
- return res;
+ return Math.floor(counter);
 }
