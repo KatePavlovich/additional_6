@@ -7,7 +7,7 @@ var num= parseInt(expression);
 
 
 	N =Math.log(num) / Math.log(5);
-	for (var i=1; i<N; i++){
+	for (var i=1; i<=N; i++){
 counter += num/Math.pow(5,i)
 
 }
